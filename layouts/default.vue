@@ -5,6 +5,8 @@
                 <NuxtLink to="/" class="font-bold">Movie Watchlist Maker</NuxtLink>
                 <ul class="flex gap-4">
                     <li><NuxtLink to="/">Home</NuxtLink></li>
+                    <li><NuxtLink to="/watchlist" v-if="user">My Watchlist</NuxtLink></li>
+                    <li><NuxtLink to="/login" v-if="!user">Login</NuxtLink></li>
                 </ul>
             </nav>
         </header>
@@ -16,8 +18,8 @@
     </div>
 </template>
 
-<script setup>
-
+<script setup lang="ts">
+    const user = useSupabaseUser();
 </script>
 
 <style scoped>

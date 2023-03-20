@@ -25,16 +25,21 @@
     const searchTerm = ref('');
     const page = ref(1);
 
+    // Hides the "Previous" button if page count is 1
     const disabledPrevious = computed(() => {
         return page.value === 1;
     })
 
+    // Hides the "Next" button at the end of query pages
     const disabledNext = computed(() => {
         return page.value + 1 === data.value?.total_pages;
     })
 
+    // Temporary variable to store the search query
+    // Debouncing the search function to avoid requesting too many times from API
     const debouncedSearchTerm = refDebounced(searchTerm, 700);
 
+    // Calling the query
     const url = computed(() => {
         return `api/movies/search?query=${debouncedSearchTerm.value}&page=${page.value}`
     })
