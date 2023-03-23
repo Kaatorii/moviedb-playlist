@@ -6,3 +6,12 @@ body {
     @apply bg-gray-800;
     @apply text-white;
 }
+
+@layer components {
+    .btn {
+        @apply bg-[#000] text-white px-3 py-2 rounded-md text-sm text-white my-5;
+    }
+    .card {
+        @apply p-3 rounded-md shadow-md h-full;
+    }
+}

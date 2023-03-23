@@ -5,7 +5,7 @@
           <div class="mt-4 text-center">
               <input class="inputField text-black" type="email" placeholder="Your email" v-model="email" />
 
-              <input type="submit" class="button" :value="loading ? 'Loading' : 'Send magic link'"
+              <input type="submit" class="button btn" :value="loading ? 'Loading' : 'Send magic link'"
                   :disabled="loading" />
           </div>
       </div>
