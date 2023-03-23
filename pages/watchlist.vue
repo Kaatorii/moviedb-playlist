@@ -1,8 +1,9 @@
 <template>
     <div>
+        <MyWatchList></MyWatchList>
         <footer class="container mx-auto p4 flex justify-between">
             <ul class="flex gap-4">
-                <li class="text-lg text-red">
+                <li class="text-lg text-red-500 btn">
                     <button type="button" @click="signOut">
                         Sign Out
                     </button>

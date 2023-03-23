@@ -14,6 +14,9 @@
                 <div class="text-lg my-2 font-bold">Duration: {{ data?.runtime }} mins</div>
                 <div class="text-lg my-2 font-bold">Overview:</div>
                 <p class="text-gray-300 text-m">{{ data?.overview }}</p>
+                <NuxtLink :to="{ path: `/movies/confirm`, query: {mName: data?.title}}" v-if="user">
+                    <button class="btn">Add to Watchlist</button>
+                </NuxtLink>
             </div>
         </div>
     </div>
@@ -26,6 +29,7 @@
         layout: "movies"
     })
 
+    const user = useSupabaseUser();
     const route = useRoute();
     const config = useRuntimeConfig();
     const movieId = computed(() => route.params.id);
