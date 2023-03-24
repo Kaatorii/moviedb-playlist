@@ -1,4 +1,4 @@
-declare interface Task {
+declare interface Entry {
     id: number
     title: string
     user?: string
