@@ -1,15 +1,11 @@
 <template>
-    <div>
-        <div>Do you want to add {{ route.params.mName }} to your watchlist?</div>
+    <div class="text-2xl text-white justify-center">
+        <div>Do you want to add {{ route.query.mName }} to your watchlist?</div>
         <div>
             <button @click="addEntry" class="btn">Add</button>
             <NuxtLink to="/">
                 <button class="btn mx-5">Cancel</button>
             </NuxtLink>
-        </div>
-        <div v-if="codeError">
-            <p>{{ codeError['message'] }}</p>
-            <p>Click cancel to go back</p>
         </div>
     </div>
 </template>
@@ -34,18 +30,24 @@
     })
 
     async function addEntry () {
-        loading.value = true
-        const { data, error } = await client.from('watchlist')
+        try {
+            loading.value = true
+            const { data, error } = await client.from('watchlist')
 
-        .insert({
-            user: user.value.id,
-            title: route.query.mName,
-            uniqueident: user.value.id + route.query.mName
-        })
-        .select('id, title, user, uniqueident')
-        .single();
+            .insert({
+                user: user.value.id,
+                title: route.query.mName,
+                uniqueident: user.value.id + route.query.mName
+            })
+            .select('id, title, user, uniqueident')
+            .single();
 
-        loading.value = false
-        codeError.value = error
+            alert("added to list")
+        } catch (error) {
+            alert(error.message)
+        } finally {
+            loading.value = false
+        }
+        
     }
 </script>

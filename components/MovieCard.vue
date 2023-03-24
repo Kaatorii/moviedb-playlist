@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-    import { PropType } from 'vue';
-    import { Movie } from '~~/types/Movie';
+    import { PropType } from 'vue'
+    import { Movie } from '~~/types/Movie'
 
     const props = defineProps({
         movie: {

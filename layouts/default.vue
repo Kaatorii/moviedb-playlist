@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-    const user = useSupabaseUser();
+    const user = useSupabaseUser()
 </script>
 
 <style scoped>

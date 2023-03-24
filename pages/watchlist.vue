@@ -19,9 +19,9 @@
     })
 
 
-    const user = useSupabaseUser();
-    const loading = ref(true);
-    const supabaseAuth = useSupabaseAuthClient();
+    const user = useSupabaseUser()
+    const loading = ref(true)
+    const supabaseAuth = useSupabaseAuthClient()
 
     async function signOut() {
     try {
