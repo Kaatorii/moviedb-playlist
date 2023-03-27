@@ -12,7 +12,7 @@
   </form>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const supabase = useSupabaseClient()
 const loading = ref(false)
 const email = ref("")
@@ -52,5 +52,4 @@ const handleLogin = async () => {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
-
 </style>

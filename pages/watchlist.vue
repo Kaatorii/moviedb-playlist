@@ -4,18 +4,20 @@
         <footer class="container mx-auto p4 flex justify-between">
             <ul class="flex gap-4">
                 <li class="text-lg text-red-500 btn">
-                    <button type="button" @click="signOut">
-                        Sign Out
-                    </button>
+                    <NuxtLink to="/">
+                        <button type="button" @click="signOut">
+                            Sign Out
+                        </button>
+                    </NuxtLink>
                 </li>
             </ul>
         </footer>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
     definePageMeta({
-        middleware: ['auth']
+        middleware: 'auth'
     })
 
 

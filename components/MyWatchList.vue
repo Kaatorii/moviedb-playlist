@@ -2,7 +2,7 @@
     <div>
         <p class="text-2xl text-white justify-center my-7">My Watchlist</p>
         <div class="flex items-center h-auto mx-10">
-            <table class="table-auto rounded-lg shadow-md bg-white text-gray-800 text-md bg-gray-800 text-white">
+            <table class="table-auto rounded-lg shadow-md text-md bg-gray-800 text-white">
                 <thead>
                     <tr>
                     <th class="px-4 py-2">DATE ADDED</th>
