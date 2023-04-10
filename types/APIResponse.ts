@@ -1,5 +1,6 @@
 import { Movie } from "./Movie"
 
+// initialize type
 export type APIResponse = {
     page: number
     results: Movie[]

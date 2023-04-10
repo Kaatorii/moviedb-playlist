@@ -39,7 +39,7 @@
     // Debouncing the search function to avoid requesting too many times from API
     const debouncedSearchTerm = refDebounced(searchTerm, 700)
 
-    // Calling the query
+    // Fetching the query
     const url = computed(() => {
         return `api/movies/search?query=${debouncedSearchTerm.value}&page=${page.value}`
     })

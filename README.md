@@ -4,17 +4,22 @@ A school project for IU University of Applied Science - movie database fetcher, 
 
 ## Setup
 
+Application requirements:
+
+```
+
+code edior of your choice
+
+nodejs
+
+```
+
 Installing dependencies
 
 ```bash
-# yarn
-yarn install
 
-# npm
 npm install
 
-# pnpm
-pnpm install
 ```
 
 ## Development Server
@@ -22,5 +27,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
+
 npm run dev
+
 ```

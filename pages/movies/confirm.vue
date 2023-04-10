@@ -23,17 +23,18 @@
     const loading = ref(false)
     const codeError = ref('')
 
+    // Fetch database from supabase using built-in function
     const { data: watchlist } = await useAsyncData('watchlist', async () => {
         const { data } = await client.from('watchlist').select('id, title').eq('user', user.value.id)
         
         return data
     })
 
+    // Implement add new entry to database function
     async function addEntry () {
         try {
             loading.value = true
             const { data, error } = await client.from('watchlist')
-
             .insert({
                 user: user.value.id,
                 title: route.query.mName,

@@ -1,3 +1,4 @@
+// Initialize type
 export type Movie = {
     id: number
     title: string

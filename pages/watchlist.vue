@@ -25,6 +25,7 @@
     const loading = ref(true)
     const supabaseAuth = useSupabaseAuthClient()
 
+    // Implement log out function
     async function signOut() {
     try {
         loading.value = true

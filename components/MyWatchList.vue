@@ -34,12 +34,15 @@
     const user = useSupabaseUser()
     const loading = ref(false)
 
+
+    // Fetch database from supabase using built-in function
     const { data: watchlist } = await useAsyncData('watchlist', async () => {
         const { data } = await client.from('watchlist').select('id, title, date_added').eq('user', user.value.id)
     
         return data
     })
     
+    // Implement remove entry from database function
     const removeEntry = async (entry: Entry) => {
         watchlist.value = watchlist.value.filter(t => t.id !== entry.id)
         await client.from('watchlist').delete().match({ id: entry.id })

@@ -1,3 +1,5 @@
+// Search using name query 
+
 export default defineEventHandler((event) => {
     const { query, page } = getQuery(event)
     const config = useRuntimeConfig()

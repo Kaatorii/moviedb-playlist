@@ -17,7 +17,7 @@ const supabase = useSupabaseClient()
 const loading = ref(false)
 const email = ref("")
 
-//authentication using supabase plugin
+// Authentication using supabase plugin
 const handleLogin = async () => {
   try {
       loading.value = true

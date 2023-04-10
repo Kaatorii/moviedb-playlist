@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+    // Fetch user information and log in status
     const user = useSupabaseUser()
 </script>
 

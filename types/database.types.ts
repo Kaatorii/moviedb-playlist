@@ -6,6 +6,8 @@ export type Json =
   | { [key: string]: Json }
   | Json[]
 
+
+// initiualize interface
 export interface Database {
     public: {
         Tables: {
