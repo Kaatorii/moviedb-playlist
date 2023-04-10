@@ -16,6 +16,7 @@ nodejs
 
 Installing dependencies
 
+Open terminal in the project folder
 ```bash
 
 npm install
@@ -26,6 +27,7 @@ npm install
 
 Start the development server on http://localhost:3000
 
+Open terminal in the project folder
 ```bash
 
 npm run dev
