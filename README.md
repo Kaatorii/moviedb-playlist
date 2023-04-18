@@ -1,6 +1,7 @@
 ## Description
 
 A school project for IU University of Applied Science - movie database fetcher, watchlist application with user login.
+Please read file extra_instruction in zip folder for more instructions
 
 ## Setup
 
