@@ -4,14 +4,12 @@ A school project for IU University of Applied Science - movie database fetcher, 
 
 ## Setup
 
-Application requirements:
+Application requirements
 
 ```
-
 code edior of your choice
 
 nodejs
-
 ```
 
 Installing dependencies
